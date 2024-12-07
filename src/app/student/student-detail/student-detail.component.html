@@ -1,0 +1,25 @@
+@if(detail){
+    <article>
+        <div>
+            <p>Student ID: {{detail.id}}</p>
+            <p>Nome: {{detail.nome}}</p>
+            <p>Data di Nascita: {{detail.dob}}</p>
+            <p>Telefono: {{detail.phone}}</p>
+            <p>Email: {{detail.email}}</p>
+            <p>Classe: {{detail.course}}</p>
+            <button (click)="onSelectStudent(detail)">Seleziona</button>
+        </div>
+    </article>
+    <article>
+    <div id="scoreContainer">
+        @for (score of scoreDetails; track $index) {
+            @if(score.nome== detail.nome){
+                <app-score-component (chooseScoreEvent)="onScoreSelected($event)" [scDetail]="score">
+
+            </app-score-component>}
+
+        }
+    </div>
+</article>
+
+}

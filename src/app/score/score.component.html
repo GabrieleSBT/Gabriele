@@ -1,0 +1,13 @@
+@if(scDetail){
+    <article>
+        <div>
+            <p>Student ID: {{scDetail.id}}</p>
+            <p>Nome: {{scDetail.nome}}</p>
+            <p>Punteggio: {{scDetail.punteggio}}</p>
+            <p>Insegnate:{{scDetail.insegnante}}</p>
+            <p>Casata:{{scDetail.casata}}</p>
+            <p>Motivazione: {{scDetail.motivazione}}</p>
+            <button (click)="onSelectScore(scDetail)">Back</button>
+        </div>
+    </article>
+}
